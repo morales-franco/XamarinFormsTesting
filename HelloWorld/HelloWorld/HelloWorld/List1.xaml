@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HelloWorld.List1">
+
+    <ListView x:Name="listView"
+              SeparatorColor="Blue"
+              HasUnevenRows ="True" 
+    >
+        <!--
+        HasUnevenRows Tiene filas desiguales! Toma el alto de la fila más alta 
+        por si las imagenes tiene tamaño distintos o el padding hace que pases a la otra fila
+            -->
+
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <!--<TextCell Text="{Binding Name}" Detail="{Binding Status} " /> NO permite imagenes en la celdas-->
+               
+                <!--<ImageCell Text="{Binding Name}" 
+                               Detail="{Binding Status} " 
+                               ImageSource="{Binding ImageUrl}" />-->
+
+                <!-- Para hacer una customización total de la celda, crear la nuestra ! -->
+                <ViewCell>
+                    <StackLayout Orientation="Horizontal"
+                                 Padding="5">
+                        <Image Source="{Binding ImageUrl}"
+                               WidthRequest="50"
+                               HeightRequest="50"
+                               Aspect="AspectFill"/>
+
+                        <StackLayout HorizontalOptions="StartAndExpand">
+                            <!-- Orientation vertical default -->
+                            <Label Text="{Binding Name}"/>
+                            <Label Text="{Binding Status}" TextColor="Gray"/>
+                        </StackLayout>
+
+                        <Button Text="Follow"/>
+
+                    </StackLayout>
+                </ViewCell>
+                
+            </DataTemplate>
+        </ListView.ItemTemplate>
+        
+    </ListView>
+
+</ContentPage>

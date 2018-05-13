@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HelloWorld.AbsolutePage">
+
+    <AbsoluteLayout BackgroundColor="Yellow">
+
+        <BoxView Color="Aqua"
+                 AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+                 AbsoluteLayout.LayoutFlags="All"/>
+        
+        <!--
+        AbsoluteLayout.LayoutBounds="x, y, width, heigth" 
+        Proportional 0..1 (%)
+        Absolute values 0..100
+        
+        x e y se miden desde el top de la pantalla
+        y:1 es el final de la pantalla (parte de abajo)
+        y:0 es el principio de la pantalla
+        
+        AbsoluteLayout.LayoutFlags Indica si los valores son:
+        All: Todos proporcionales
+        PositionProportional: solo x e y son proporcionales, el resto es absoluto
+        
+        -->
+        
+        <BoxView Color="White"
+                 AbsoluteLayout.LayoutBounds="0.5, 0.1, 100, 100"
+                 AbsoluteLayout.LayoutFlags="PositionProportional"/>
+
+        <Button Text="Get Started"
+                BackgroundColor="Silver"
+                TextColor="White"
+                AbsoluteLayout.LayoutBounds="0, 1, 1, 50"
+                AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" />
+
+    </AbsoluteLayout>
+    
+</ContentPage>

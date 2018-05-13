@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HelloWorld.ListContextAcions">
+
+    <ListView x:Name="listView"
+              SeparatorColor="Blue"
+              IsPullToRefreshEnabled="True"
+              Refreshing="listView_Refreshing"
+    >
+
+        <!--
+        IsPullToRefreshEnabled: se utiliza para refrescar la grilla, muestra loading
+                   -->
+        <ListView.ItemTemplate>
+            <DataTemplate>
+
+                <ImageCell Text="{Binding Name}" 
+                               Detail="{Binding Status} " 
+                               ImageSource="{Binding ImageUrl}" >
+
+                    <!--
+                       Para activar las context actions, presionar sobre la celda unos segundos
+                   -->
+                    <ImageCell.ContextActions>
+                        <MenuItem Text="Call" 
+                                  Clicked="Call_Clicked" 
+                                  CommandParameter="{Binding .}" />
+                        
+                        <!--
+                        CommandParameter="{Binding .} para poder referenciar todo el contexto en el backend, con menuITem
+                        -->
+                        <MenuItem Text="Delete" 
+                                  Clicked="Delete_Clicked"
+                                  IsDestructive="True"
+                                  CommandParameter="{Binding .}"/>
+                        
+                    </ImageCell.ContextActions>
+                    
+                </ImageCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+
+    </ListView>
+</ContentPage>

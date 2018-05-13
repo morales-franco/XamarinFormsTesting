@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HelloWorld.ImagePage"
+             BackgroundColor="Black">
+    <AbsoluteLayout>
+
+        <!--<Image Source="https://cdn.britannica.com/700x450/25/180825-004-F51CFBFE.jpg" x:Name="image"/>-->
+        <!-- Aspect:
+            AspectFit: Tamaño originaldefault
+            Fill: Estira la imagen para que ocupe todo el espacio, sin mantener el aspecto de la imagen.
+            AspectFill: Display the image in the display area but preserve the aspect, NO deforma la imagen
+        -->
+        
+        <!--
+            ActivityIndicator solo se mostrara cuando image IsLoading
+            IsLoading es una property de Image, True mientras se carga, y finalmente false
+        -->
+        <ActivityIndicator IsRunning="{Binding Source={x:Reference image}, Path=IsLoading}" 
+                           AbsoluteLayout.LayoutBounds="0.5,0.5, 100,100"
+                           AbsoluteLayout.LayoutFlags="PositionProportional"
+                           Color="White"/>
+
+        <Image x:Name="image" 
+               Aspect="AspectFill"
+               AbsoluteLayout.LayoutBounds="0,0,1,1"
+               AbsoluteLayout.LayoutFlags="All"/>
+        
+    </AbsoluteLayout>
+</ContentPage>

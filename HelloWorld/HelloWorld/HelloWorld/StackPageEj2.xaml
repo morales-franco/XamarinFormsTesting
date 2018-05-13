@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HelloWorld.StackPageEj2">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Padding="10">
+                
+                <Label Text="nyc_photographer"/>
+                
+            </StackLayout>
+            
+            <Image Source="https://laurelberninteriors.com/wp-content/uploads/2015/04/skanor-sweden-winter-beach1.jpeg"
+                       Aspect="Fill"/>
+
+            <StackLayout Orientation="Horizontal"
+                         Spacing="20" 
+                         Padding="10, 0">
+
+                <Label Text="Like"
+                       TextColor="LightBlue"/>
+
+                <Label Text="Comment"
+                       TextColor="LightBlue"/>
+
+                <Label Text="Share"
+                       TextColor="LightBlue"/>
+
+            </StackLayout>
+
+            <StackLayout Padding="10">
+                <BoxView Color="#f0f0f0" 
+                         HeightRequest="1"/>
+
+                <Label Text="700 likes"
+                       FontAttributes="Bold"/>
+
+                <Label Text="This a shot yesterday in Skanor, Sweden, when driving home, from a couple of days of work in Denmark"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
