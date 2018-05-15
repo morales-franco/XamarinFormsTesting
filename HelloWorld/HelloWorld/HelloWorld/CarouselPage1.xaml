@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CarouselPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HelloWorld.CarouselPage1">
+
+    <ContentPage>
+        <Label Text="PAGE 1" />
+    </ContentPage>
+
+    <ContentPage>
+        <Label Text="PAGE 2" />
+    </ContentPage>
+
+    <ContentPage>
+        <Label Text="PAGE 3" />
+    </ContentPage>
+    
+</CarouselPage>

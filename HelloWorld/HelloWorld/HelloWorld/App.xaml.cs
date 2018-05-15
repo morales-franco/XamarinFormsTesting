@@ -32,7 +32,21 @@ namespace HelloWorld
             //MainPage = new ListGroup();
             //MainPage = new ListSelections();
             //MainPage = new ListContextAcions();
-            MainPage = new ListSearchBar();
+            //MainPage = new ListSearchBar();
+
+            //MainPage = new NavigationPage(new WelcomePage())
+            //{
+            //    BarBackgroundColor = Color.Gray,
+            //    BarTextColor = Color.White
+            //};
+
+            //MainPage = new NavigationPage(new ContactsPage());
+
+            //MainPage = new MasterContactsPage();
+
+            //MainPage = new TabbedPage1();
+
+            MainPage = new CarouselPage1();
         }
 
 		protected override void OnStart ()

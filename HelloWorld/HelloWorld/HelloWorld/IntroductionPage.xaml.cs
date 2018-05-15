@@ -16,5 +16,17 @@ namespace HelloWorld
 		{
 			InitializeComponent ();
 		}
-	}
+
+        private async void Button_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PopAsync();
+            //Navigation.PopModalAsync() For modal
+        }
+
+        protected override bool OnBackButtonPressed()
+        {
+            //return true; no retorna a pagina anterior al apretar el botón volver del smartphone
+            return base.OnBackButtonPressed();
+        }
+    }
 }

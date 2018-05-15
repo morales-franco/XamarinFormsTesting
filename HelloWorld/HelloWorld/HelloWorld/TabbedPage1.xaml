@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HelloWorld.TabbedPage1"
+            xmlns:local="clr-namespace:HelloWorld">
+  
+    <ContentPage Title="Tab 1" >
+        <Label Text="TAB1" VerticalOptions="Center"  HorizontalOptions="Center"/>
+    </ContentPage>
+    <ContentPage Title="Tab 2" >
+        <Label Text="TAB 2" VerticalOptions="Center"  HorizontalOptions="Center"/>
+    </ContentPage>
+
+    <ContentPage Title="Tab 3" >
+        <Label Text="TAB 3" VerticalOptions="Center"  HorizontalOptions="Center"/>
+    </ContentPage>
+
+    <local:MasterContactsPage Title="Tab4 - Master" />
+
+</TabbedPage>

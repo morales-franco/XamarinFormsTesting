@@ -10,16 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace HelloWorld
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class WelcomePage : ContentPage
+	public partial class CarouselPage1 : CarouselPage
 	{
-		public WelcomePage ()
+		public CarouselPage1()
 		{
 			InitializeComponent ();
 		}
-
-        private async void Button_Clicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new IntroductionPage());
-        }
-    }
+	}
 }
