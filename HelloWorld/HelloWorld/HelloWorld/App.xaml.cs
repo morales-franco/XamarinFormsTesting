@@ -46,7 +46,12 @@ namespace HelloWorld
 
             //MainPage = new TabbedPage1();
 
-            MainPage = new CarouselPage1();
+            //MainPage = new CarouselPage1();
+
+            //MainPage = new PopUpPage();
+
+            MainPage = new NavigationPage(new ToolbarPage());
+
         }
 
 		protected override void OnStart ()
