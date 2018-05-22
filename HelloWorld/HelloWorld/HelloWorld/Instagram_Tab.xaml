@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HelloWorld.Instagram_Tab"
+            xmlns:local="clr-namespace:HelloWorld"
+            NavigationPage.HasNavigationBar="False">
+
+    <local:Instagram_List Title="Activities"
+                             Icon="heart.png"/>
+
+    <local:Instagram_Profile Title="Profile"
+                             Icon="user.png"/>
+
+
+</TabbedPage>

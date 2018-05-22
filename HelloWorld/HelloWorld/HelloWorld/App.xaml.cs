@@ -50,7 +50,9 @@ namespace HelloWorld
 
             //MainPage = new PopUpPage();
 
-            MainPage = new NavigationPage(new ToolbarPage());
+            //MainPage = new NavigationPage(new ToolbarPage());
+
+            MainPage = new NavigationPage(new Instagram_Tab());
 
         }
 
