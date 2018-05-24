@@ -28,6 +28,19 @@
                  Minimum="0"
                  Maximum="50"/>
         <Label Text="{Binding Source={x:Reference stepper}, Path=Value}"/>
+
+        <Entry Keyboard="Numeric"
+               Placeholder="Phone"/>
+
+        <Entry IsPassword="True"
+               Completed="Entry_Completed"
+               TextChanged="Entry_TextChanged"/>
+
+        <Label x:Name="labelCompleted"/>
+
+        <Editor BackgroundColor="Aquamarine"
+                VerticalOptions="FillAndExpand"/>
+
     </StackLayout>
     
     

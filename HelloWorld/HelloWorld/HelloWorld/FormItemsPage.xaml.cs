@@ -21,5 +21,15 @@ namespace HelloWorld
         {
             label.IsVisible = e.Value;
         }
+
+        private void Entry_Completed(object sender, EventArgs e)
+        {
+            labelCompleted.Text = "Completed";
+        }
+
+        private void Entry_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            label.Text = e.NewTextValue;
+        }
     }
 }
