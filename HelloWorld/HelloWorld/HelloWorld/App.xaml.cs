@@ -54,7 +54,13 @@ namespace HelloWorld
 
             // MainPage = new NavigationPage(new Instagram_Tab());
 
-            MainPage = new FormItemsPage();
+            //MainPage = new FormItemsPage();
+
+            //MainPage = new PickersFormPage();
+
+            // MainPage = new TableViewPage();
+
+            MainPage = new NavigationPage(new TableViewPage());
         }
 
 		protected override void OnStart ()
