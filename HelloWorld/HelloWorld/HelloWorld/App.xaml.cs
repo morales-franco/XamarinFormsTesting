@@ -60,7 +60,9 @@ namespace HelloWorld
 
             // MainPage = new TableViewPage();
 
-            MainPage = new NavigationPage(new TableViewPage());
+            //MainPage = new NavigationPage(new TableViewPage());
+
+            MainPage = new NavigationPage(new ContactsPageEj());
         }
 
 		protected override void OnStart ()
